@@ -1,0 +1,270 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  background-color: #E9EBEE
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; 
+}
+.push{
+  height: 60px;
+}
+
+.addBtn{
+  padding-top: 4px;
+  text-align: center;
+  display: block;
+  width: 200px;
+  height: 35px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;  
+}
+.addBtn:hover{
+  color: #fff;
+  background-color: #28a745;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+header{
+  min-height: 70px;
+  background-color: #3672F8;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 50px;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#name{
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500
+}
+#name:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
+.navig{
+  width: 160px;
+}
+.right{
+  display: flex;
+}
+.about{
+  padding: 10px 0;
+  color: #fff;
+    text-decoration: none;
+    margin-top: 11px;
+    margin-right: 15px;
+}
+.about:hover{
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+}
+.logout{
+  background-color: #fff;
+  width: 140px;
+  text-align: center;
+  height: 40px;
+  margin-top: 15px;
+  padding-top: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.logout:hover{
+  opacity: 0.85;
+}
+
+.select{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.selectBtn{
+  width: 49%;
+  background-color: #fff;
+  text-align: center;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.selectBtn_active{
+  background-color: #3672F8;
+  color: #fff; 
+  cursor: default;
+}
+
+
+.tasks{
+  background-color: #fff;
+}
+#task_table{
+  width: 100%;
+}
+#task_table th,td{
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px 0;
+}
+.completedBtn button{
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+#schedule, #tasks{
+  padding-bottom: 80px;
+  min-height: 100%;
+}
+
+.schedule{
+  background-color: #fff;
+  position: relative;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 ;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  border-bottom: transparent;
+}
+.button{
+  border: #3498db solid 2px;
+  background-color: transparent;
+  color: rgba(24, 33, 83, 1);
+  padding: 7px 0;
+  width: 165px;
+  border-radius: 10px;
+  font-size: 18px;
+
+}
+.buttonActive{
+  background-color: #3498db;
+  color: #fff;
+  
+}
+.button:focus{
+  outline: none;
+}
+
+.schedule_table {
+  width: 100%;
+  display: none;
+}
+
+.schedule_table  th,td {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+}
+.schedule_table  th {
+  font-weight: normal;
+  border: rgba(24, 33, 83, 1) solid 1px;;
+  max-width: 50px;
+}
+.schedule_table  td {
+  font-size:18px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.4;
+  border-radius: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+.schedule_table  td > span {
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+  color:  rgba(24, 33, 83, 1)
+}
+.schedule_table td:nth-child(3){
+  width: 175px;
+}
+.schedule_table td:nth-child(1){
+  width: 200px;
+}
+
+
+footer{
+  color: #fff;
+  background-color: #3672F8;
+  text-align: center;
+  height: 60px;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px){
+  .navig{
+    display: none;
+  }
+  header{
+    padding: 0 10px;
+  }
+  #name{
+    top: 0;
+    position: relative;
+    padding: 17px 0;
+    font-size: 22px;
+  }
+  .selectBtn{
+    font-size: 18px;
+  }
+  .about{
+    display: none;
+  }
+}

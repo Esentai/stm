@@ -1,0 +1,87 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+html, body {
+  height: 100%;
+}
+
+header{
+  min-height: 70px;
+  background-color: #3672F8;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 50px;
+}
+
+
+header h2{
+  color: #fff;
+  font-size: 30px;
+  padding: 12px 0;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500
+}
+.homeBtn,.logout{
+  background-color: #fff;
+  width: 140px;
+  text-align: center;
+  height: 40px;
+  margin-top: 15px;
+  padding-top: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.homeBtn:hover,.logout:hover{
+  opacity: 0.85;
+  color: #000;
+  text-decoration: none;
+}
+
+#fullname{
+  color: #3672F8;
+  margin-top: 20px;
+  font-size: 50px;
+}
+#info{
+  font-size: 20px;  
+}
+
+#requestBtn{
+  width: 300px;
+  height: 35px;
+  border:none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+footer{
+  color: #fff;
+  background-color: #3672F8;
+  text-align: center;
+  height: 60px;
+  font-size: 18px;
+  padding-top: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 768px){
+  header{
+    padding: 0 10px;
+  }
+  .homeBtn,.logout{
+    width: 100px;
+  }
+  header h2{
+    font-size: 25px;
+    padding: 20px 0;
+  }
+}

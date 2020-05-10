@@ -1,0 +1,131 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 15px 45px 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form h2{
+  padding: 10px 0 15px;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  opacity: 0.9;
+  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+}
+
+
+header{
+  min-height: 70px;
+  background-color: #3672F8;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 50px;
+}
+
+
+header h2{
+  color: #fff;
+  font-size: 30px;
+  padding: 12px 0;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500
+}
+.homeBtn,.logout{
+  background-color: #fff;
+  width: 140px;
+  text-align: center;
+  height: 40px;
+  margin-top: 15px;
+  padding-top: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.homeBtn:hover,.logout:hover{
+  opacity: 0.85;
+  color: #000;
+  text-decoration: none;
+}
+table{
+  margin-top: 20px;
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse
+}
+
+th,td{
+  text-align: center;
+  border: 1px solid #000;
+  padding: 13px 0;
+}
+.btnDefault{
+  background-color: #007bff
+}
+.btnDelete{
+  background-color: #dc3545
+}
+.adminBtn{
+  border:none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.adminBtn:hover{
+  opacity: 0.9
+}
+.adminBtn:focus{
+  outline: none;
+}
+@media (max-width: 768px){
+  header{
+    padding: 0 10px;
+  }
+  .homeBtn,.logout{
+    width: 100px;
+  }
+  header h2{
+    font-size: 25px;
+    padding: 20px 0;
+  }
+}

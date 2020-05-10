@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="css/admin.css">
+  <title>Admin Panel</title>
+</head>
+
+<body>
+  <div id="loginForm" class="login-page">
+    <div class="form">
+      <h2>Please login</h2>
+      <div class="login-form">
+        <input type="text" id="login" placeholder="login" autocomplete="off" />
+        <input type="password" id="password" placeholder="password" autocomplete="off" />
+        <button onclick="login()">login</button>
+      </div>
+    </div>
+  </div>
+  <div id="auth" style="display: none">
+    <header>
+      <a class="homeBtn" href="HomePage.html">Home page</a>
+      <h2>Admin panel</h2>
+      <div onclick="logout()" class="logout">Logout</div>
+    </header>
+    <div class="container">
+      <table id="admin">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Specialty</th>
+            <th>Group</th>
+            <th>Ban</th>
+            <th>Teamleader</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

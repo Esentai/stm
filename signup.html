@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/signup.css">
+  <title>Sign up</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="wrapper">
+      <h1 class="mainTitle">Create account</h1>
+      <ul class="steps">
+        <li class="step is-active">Step 1</li>
+        <li class="step">Step 2</li>
+        <li class="step">Step 3</li>
+      </ul>
+      <form class="form-wrapper">
+        <fieldset class="section is-active">
+          <h3>Your Details</h3>
+          <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
+          <input type="text" name="surname" id="surname" placeholder="Surname" autocomplete="off">
+          <input type="text" name="email" id="email" placeholder="Email">
+          <div onclick="next('step1')" class="button">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <div class="loader" id="loader" style="display: none"></div>
+          <h3>Your Group</h3>
+          <div id="selects">
+            <select name="course" id="course" onchange="selectCourse()">
+              <option value="none">Select course</option>
+              <option value="1">1 course</option>
+              <option value="2">2 course</option>
+              <option value="3">3 course</option>
+              <option value="4">4 course</option>
+            </select>
+            <select name="specialty" id="specialty" onchange="selectSpecialty()" style="display: none">
+            </select>
+            <select name="group" id="group" onchange="selectGroup()" style="display: none">
+            </select>
+          </div>
+          <div onclick="next('step2')" class="button">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <h3>Choose a Password</h3>
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
+          <div onclick="next('step3')" class="button">Sign Up</div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <script src="js/signup.js"></script>
+</body>
+
+</html>

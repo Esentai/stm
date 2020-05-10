@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="css/addTask.css">
+  <title>Add task</title>
+</head>
+
+<body>
+  <header>
+    <a class="homeBtn" href="HomePage.html">Home page</a>
+    <h2>Add Task</h2>
+    <div onclick="logout()" class="logout">Logout</div>
+  </header>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Course</label>
+        <input type="text" class="form-control" id="course" readonly>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Specialty</label>
+        <input type="text" class="form-control" id="specialty" readonly>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Group</label>
+        <input type="text" class="form-control" id="group" readonly>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Subject name</label>
+        <input type="text" class="form-control" id="subname">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Task name</label>
+        <input type="text" class="form-control" id="tname">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Deadline</label>
+        <input type="datetime-local" class="form-control" id="time">
+      </div>
+      <button class="addBtn" onclick="addTask()">Add task</button>
+    </form>
+  </div>
+  <script src="js/addTask.js"></script>
+</body>
+
+</html>

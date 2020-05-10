@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/signup.css">
+  <title>Sign up</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <h1 class="mainTitle">Sign in</h1>
+      <form class="form-wrapper">
+        <fieldset class="section is-active">
+          <h3>Enter your email and password</h3>
+          <p id="error_message"></p>
+          <input type="text" name="email" id="email" placeholder="Email" autocomplete="off">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <button onclick="login()" class="loginBtn" type="button">Sign in</button>
+          <p class="auth_text">Don't have an account?
+            <a href="signup.html">Sign Up</a>
+          </p>
+        </fieldset>
+
+      </form>
+
+    </div>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>
