@@ -22,106 +22,100 @@
       <a href="profile.html" id="name">
       </a>
       <div class="right">
-        <a href="#" class="about">About us</a>
+        <a href="about/index.html" class="about">About us</a>
         <div onclick="logout()" class="logout">Logout</div>
       </div>
     </header>
-
-    <section id="select">
-      <div class="container">
-        <div class="select">
-          <div onclick="select(0)" class="selectBtn selectBtn_active">Smart Tasks</div>
-          <div onclick="select(1)" class="selectBtn ">Schedule</div>
-        </div>
-      </div>
-    </section>
-    <section id="tasks">
-      <div class="container">
-        <a href="addTask.html" id="addBtn" style="display: none" class="addBtn">Add task</a>
-        <div class="tasks">
-          <table id="task_table">
-            <thead>
-              <tr>
-                <th>Subject name</th>
-                <th>Task</th>
-                <th>Deadline</th>
-                <th>Completed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Web development</td>
-                <td>Lab 9</td>
-                <td>10.05.2020 23:59</td>
-                <td class="completedBtn">
-                  <button>Completed</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-    <section id="schedule" style="display: none">
-      <div class="container">
-        <div class="schedule">
-          <div class="loader" id="loader" style="display: none"></div>
-          <div class="buttons">
-            <button id="btn1" class="button">Monday</button>
-            <button id="btn2" class="button">Tuesday</button>
-            <button id="btn3" class="button">Wednesday</button>
-            <button id="btn4" class="button">Thursday</button>
-            <button id="btn5" class="button">Friday</button>
-            <button id="btn6" class="button">Saturday</button>
+    <div class="container" id="disableMessage" style="display: none">
+      <h1>You are blocked!</h1>
+    </div>
+    <div id="mainContent">
+      <section id="select">
+        <div class="container">
+          <div class="select">
+            <div onclick="select(0)" class="selectBtn selectBtn_active">Smart Tasks</div>
+            <div onclick="select(1)" class="selectBtn ">Schedule</div>
           </div>
-          <table class="schedule_table" id="1">
-
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-
-          </table>
-          <table class="schedule_table" id="2">
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-          </table>
-          <table class="schedule_table" id="3">
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-          </table>
-          <table class="schedule_table" id="4">
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-          </table>
-          <table class="schedule_table" id="5">
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-          </table>
-          <table class="schedule_table" id="6">
-            <tr>
-              <th>Time</th>
-              <th>Subject</th>
-              <th>Places</th>
-            </tr>
-          </table>
         </div>
-      </div>
-    </section>
-    <div class="push"></div>
+      </section>
+      <section id="tasks">
+        <div class="container">
+          <a href="addTask.html" id="addBtn" style="display: none" class="addBtn">Add task</a>
+          <div class="tasks">
+            <table id="task_table">
+              <thead>
+                <tr class="head">
+                  <th>Subject name</th>
+                  <th>Task</th>
+                  <th>Deadline</th>
+                  <th>Completed</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section id="schedule" style="display: none">
+        <div class="container">
+          <div class="schedule">
+            <div class="loader" id="loader" style="display: none"></div>
+            <div class="buttons">
+              <button id="btn1" class="button">Monday</button>
+              <button id="btn2" class="button">Tuesday</button>
+              <button id="btn3" class="button">Wednesday</button>
+              <button id="btn4" class="button">Thursday</button>
+              <button id="btn5" class="button">Friday</button>
+              <button id="btn6" class="button">Saturday</button>
+            </div>
+            <table class="schedule_table" id="1">
+
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+
+            </table>
+            <table class="schedule_table" id="2">
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+            </table>
+            <table class="schedule_table" id="3">
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+            </table>
+            <table class="schedule_table" id="4">
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+            </table>
+            <table class="schedule_table" id="5">
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+            </table>
+            <table class="schedule_table" id="6">
+              <tr class="head">
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Places</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <div class="push"></div>
+    </div>
   </div>
   <footer>
     ©Copyright 2020, Created By Yessentay and Anelya

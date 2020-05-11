@@ -31,9 +31,18 @@ if (!userCheck) {
   document.location.href = 'login.html'
 }
 console.log(currentUser.teamLeader.admin)
+
+if (currentUser.disable) {
+  document.getElementById("mainContent").style.display = "none";
+  document.getElementById("disableMessage").style.display = "block";
+
+}
 if (currentUser.teamLeader.admin) {
   document.getElementById("addBtn").style.display = "block"
 }
+
+
+
 
 function logout() {
   for (let i = 0; i < users.length; i++) {
@@ -130,6 +139,100 @@ function def() {
 }
 
 
+showTasks()
+function showTasks() {
+  let table = document.getElementById("task_table");
+  for (let i = 0; i < currentUser.tasks.sort(compare).sort(compare2).length; i++) {
+    let row = table.insertRow(i + 1);
+    row.insertCell(0).innerHTML = currentUser.tasks[i].subname
+    row.insertCell(1).innerHTML = currentUser.tasks[i].tname
+    row.insertCell(2).id = i + 99
+    timer(currentUser.tasks[i].date, i + 99)
+    row.insertCell(3).innerHTML = `<button id="${currentUser.tasks[i].id}" onclick="completed('${currentUser.tasks[i].id}')" class="completedBtn">Completed</button>`
+
+  }
+}
+checkTasks()
+function completed(id) {
+  for (let i = 0; i < currentUser.tasks.length; i++) {
+    if (currentUser.tasks[i].id == id) {
+      currentUser.tasks[i].completed = true;
+      updateData()
+      checkTasks()
+
+    }
+  }
+}
+function updateData() {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id = currentUser.id) {
+      users[i] = currentUser;
+    }
+  }
+  localStorage.setItem("users", JSON.stringify(users));
+}
+function checkTasks() {
+  for (let i = 0; i < currentUser.tasks.length; i++) {
+    if (currentUser.tasks[i].completed) {
+      document.getElementById(`${currentUser.tasks[i].id}`).style.backgroundColor = "#28a745"
+    } else {
+      document.getElementById(`${currentUser.tasks[i].id}`).style.backgroundColor = "#C82333"
+    }
+  }
+}
+
+
+
+function compare2(a, b) {
+  const bandA = a.completed
+  const bandB = b.completed
+  let comparison = 0;
+  if (bandA > bandB) {
+    comparison = 1;
+  } else if (bandA < bandB) {
+    comparison = -1;
+  }
+  return comparison;
+}
+
+
+
+function compare(a, b) {
+  const bandA = a.date
+  const bandB = b.date
+  let comparison = 0;
+  if (bandA > bandB) {
+    comparison = 1;
+  } else if (bandA < bandB) {
+    comparison = -1;
+  }
+  return comparison;
+}
+
+
+function timer(time, id) {
+  var countDownDate = time
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById(`${id}`).innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById(`${id}`).innerHTML = "EXPIRED";
+    }
+    if (days == 0) {
+      document.getElementById(`${id}`).style.color = "#C82333"
+    }
+  }, 1000);
+}
+
+
+
 showSchedule()
 let schedule_data = [];
 let schedule;
@@ -158,7 +261,7 @@ function showTable() {
       if (schedule_data[i].data[j] != null) {
         scheduleCheck = true;
         var row = table.insertRow(j);
-        row.insertCell(0).innerHTML = schedule.times[schedule_data[i].data[j][0].time_id].start_time + " - " + schedule.times[schedule_data[i].data[j][0].time_id].end_time
+        row.insertCell(0).innerHTML = getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].start_time) + " - " + getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].end_time)
         row.insertCell(1).innerHTML = schedule.subjects[schedule_data[i].data[j][0].subject_id].subject_en
         if (schedule_data[i].data[j][0].bundle_id < 459) {
           row.insertCell(2).innerHTML = schedule.bundles[schedule_data[i].data[j][0].bundle_id][0].name_en
@@ -181,6 +284,12 @@ function showTable() {
       }
     }
   }
+}
+function getSubjectTime(time) {
+  let str = time.split(":")
+  let current = str[0] + ":" + str[1];
+  return current;
+
 }
 
 async function getSchedule() {

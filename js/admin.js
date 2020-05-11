@@ -40,21 +40,38 @@ function showUsers() {
     row.insertCell(3).innerHTML = users[i].course
     row.insertCell(4).innerHTML = users[i].specialty.name_en
     row.insertCell(5).innerHTML = users[i].group.name_en
-    row.insertCell(6).innerHTML = `<button>Disable</button>`
+    row.insertCell(6).innerHTML = `<button id="${users[i].email}"  onclick="disable('${users[i].email}')" >Disable</button>`
     row.insertCell(7).innerHTML = teamLeader
     row.insertCell(8).innerHTML = `<button class="adminBtn btnDefault">Update</button>`
     row.insertCell(9).innerHTML = `<button onclick="deleteUser('${users[i].email}')"  class="adminBtn btnDelete">Delete</button>`
   }
 }
 
+function disable(email) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email == email) {
+      if (users[i].disable) {
+        users[i].disable = !users[i].disable;
+        document.getElementById(`${email}`).innerHTML = "Enable";
+      } else {
+        users[i].disable = !users[i].disable;
+        document.getElementById(`${email}`).innerHTML = "Disable";
+      }
+    }
+  }
+  localStorage.setItem("users", JSON.stringify(users));
+  location.reload();
+}
+
+
 function access(email) {
-  console.log("ok")
   for (let i = 0; i < users.length; i++) {
     if (users[i].email == email) {
       users[i].teamLeader.admin = !users[i].teamLeader.admin;
       localStorage.setItem("users", JSON.stringify(users));
       location.reload();
     }
+
   }
 }
 
@@ -64,6 +81,11 @@ function checkBtn() {
       document.getElementById(`${users[i].id}`).style.backgroundColor = "#28a745"
     } else if (users[i].teamLeader.request) {
       document.getElementById(`${users[i].id}`).style.backgroundColor = "#C82333"
+    }
+    if (users[i].disable) {
+      document.getElementById(`${users[i].email}`).innerHTML = "Enable";
+    } else {
+      document.getElementById(`${users[i].email}`).innerHTML = "Disable";
     }
   }
 }

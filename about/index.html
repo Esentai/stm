@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart POS </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container-fluid">
+
+            <div class=" clearfix">
+                <a href="" class="logotype">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="phone-number sm-hidden">
+                    <span>
+                        <a href="tel:+7 727 299 00 66">+7 727 2990066</a>
+                    </span>
+                </div>
+                <div class="pull-right menu-sm">
+                </div>
+            </div>
+            <div class="main-text">
+                <h1>Smart task manager</h1>
+                <p>Сервис создан для того чтоб предоставить водителям возможность оплатить администрвативный штраф на месте
+                    выписывания протокола и получить 50% скидку на его оплату. </p>
+                <p>Пополните лицевой счет Вашего автомобиля для автоматической оплаты штрафа при появлении протокола в базе
+                    МВД.
+                </p>
+                <p>Оплатить штраф можно безналичным способом с любой банковской карты или электронного кошелька. Сервис предоставляется
+                    через Smart POS терминал.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-offset-2 col-md-8 center-content">
+                            <div class="row ">
+
+                                <div class="col-md-6 col-sm-6 text-center service-div-margin">
+                                    <img class="Inspektor" src="images/Inspektor.png" alt="">
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="text-service">
+                                        <p class="title-service">Как оплатить штраф на месте и получить 50% скидку?</p>
+                                        <p> 1. Вас остановили за нарушение ПДД и Вы хотите оплатить штраф на месте, не бегая
+                                            по банкам
+                                            <br>
+                                            <br> 2. Введите гос. номер автомобиля (пример :777DKА01, A555DKA)
+                                            <br>
+                                            <br> 3. Введите номер протокола который вам выписывает инспектор.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-6 hidden-xs">
+                                    <div class="text-service text-right">
+                                        <p class="title-service">Чем можно оплатить штраф на месте?</p>
+                                        <p style="text-align: left;">
+                                            Пополните счёт безналичным способом с банковской карты или с электронного кошелька
+                                            <br>
+                                            <br> Все данные по полатам передаются по защищенному каналу связи
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <img class="card" src="images/creditCard.png" alt="">
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 hidden-lg hidden-md hidden-sm">
+                                    <div class="text-service">
+                                        <p class="title-service">Камеры сканируют гос. номер автомобиля</p>
+                                        <p>
+                                            На пункте пропуска, проезжайте на выделенную полосу без очереди. Видеокамера распознает гос. номер автомобиля и автоматически
+                                            списывает необходимую сумму с поездки и поднимет шлагбаум.
+                                            <br>
+                                            <br> Остаток средств на счете можно проверить введя гос.номер на payway.kz
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <img class="chek" src="images/chek.png" alt="">
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="text-service">
+                                        <p class="title-service">Оплата штрафа происходит автоматически,</p>
+                                        <p>
+
+                                            сразу после того как протокол о нарушении появиться в базах МВД
+                                            <br>
+                                            <br> После оплаты Вы получите уведомление об оплате штрафа
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br> Счастливого пути!
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <div id="map-canvas" style="height: 400px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map-canvas', {
+                    center: [43.200098, 76.904913],
+                    zoom: 17,
+                    controls: []
+                });
+                myPlacemark = createPlacemark([43.200098, 76.907913]);
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable('scrollZoom');
+                myMap.controls.add(new ymaps.control.ZoomControl({ options: { position: { right: 10, top: 90 } } }));
+            });
+            function createPlacemark(coords) {
+                return new ymaps.Placemark(coords, {
+                    iconCaption: 'поиск...'
+                }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'images/Bitmap.png',
+                        iconImageSize: [30, 50],
+                        iconImageOffset: [-15, -50],
+                        draggable: false
+                    });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
