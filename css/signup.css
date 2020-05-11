@@ -3,7 +3,7 @@ html, body{
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+  background: linear-gradient(90deg, rgba(49,31,77,1) 14%, rgba(86,58,214,1) 100%);
 }
 h1, h2, h3, h4, h5 ,h6{
   font-weight: 200;
@@ -73,6 +73,7 @@ fieldset{
 .wrapper{
   width: 100%;
   margin: 30px 0;
+  /* box-shadow: 0px 0px 90px 0px rgba(0,0,0,0.75); */
 }
 
 /* STEPS */
@@ -83,6 +84,7 @@ fieldset{
   padding: 0;
   background-color: #fff;
   text-align: center;
+  
 }
 
 
@@ -94,12 +96,13 @@ fieldset{
 }
 
 .steps li.is-active{
-  border-bottom: 1px solid #3498db;
-  color: #3498db;
+  border-bottom: 1px solid #1b4287;
+  color: #1b4287;
 }
 
 /* FORM */
 .form-wrapper{
+
   position: relative;
 }
 .form-wrapper .section{
@@ -126,7 +129,7 @@ fieldset{
 }
 
 .form-wrapper .button, .form-wrapper .submit{
-  background-color: #3498db;
+  background-color: #1b4287;
   display: inline-block;
   padding: 8px 60px;
   color: #fff;
@@ -179,7 +182,7 @@ select{
   width: 200px;
   height: 35px;
   border:none;
-  background-color: #3498db;
+  background-color: #1b4287;
   color: #fff;
   font-size: 18px;
   font-weight: 500;

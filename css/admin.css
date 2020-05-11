@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+  background-color: #E9EBEE
 }
 .login-page {
   width: 360px;
@@ -36,7 +36,7 @@ body{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+  background: #1e9672;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -48,13 +48,13 @@ body{
 }
 .form button:hover,.form button:active,.form button:focus {
   opacity: 0.9;
-  background: linear-gradient(90deg, rgba(6,190,182,1) 28%, rgba(72,177,191,1) 100%);
+  background: #1e9672
 }
 
 
 header{
   min-height: 70px;
-  background-color: #3672F8;
+  background-color: #1e9672;
   display: flex;
   justify-content: space-between;
   position: relative;

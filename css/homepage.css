@@ -39,7 +39,8 @@ html, body {
 
 header{
   min-height: 70px;
-  background-color: #3672F8;
+  /* background-color: #3672F8; */
+  background: #1e9672;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -114,7 +115,8 @@ header{
   cursor: pointer;
 }
 .selectBtn_active{
-  background-color: #3672F8;
+  /* background-color: #3672F8; */
+  background: #F3BE00;
   color: #fff; 
   cursor: default;
 }
@@ -165,7 +167,7 @@ header{
   border-bottom: transparent;
 }
 .button{
-  border: #3498db solid 2px;
+  border: #1e9672 solid 2px;
   background-color: transparent;
   color: rgba(24, 33, 83, 1);
   padding: 7px 0;
@@ -175,7 +177,7 @@ header{
 
 }
 .buttonActive{
-  background-color: #3498db;
+  background-color: #1e9672;
   color: #fff;
   
 }
@@ -225,7 +227,8 @@ header{
 
 footer{
   color: #fff;
-  background-color: #3672F8;
+  /* background-color: #3672F8; */
+  background: #1e9672;
   text-align: center;
   height: 60px;
   font-size: 18px;

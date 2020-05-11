@@ -9,7 +9,7 @@ html, body {
 
 header{
   min-height: 70px;
-  background-color: #3672F8;
+  background-color: #1e9672;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -44,7 +44,7 @@ header h2{
 }
 
 #fullname{
-  color: #3672F8;
+  color: #1e9672;
   margin-top: 20px;
   font-size: 50px;
 }
@@ -62,7 +62,7 @@ header h2{
 
 footer{
   color: #fff;
-  background-color: #3672F8;
+  background-color: #1e9672;
   text-align: center;
   height: 60px;
   font-size: 18px;
