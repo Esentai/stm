@@ -205,7 +205,7 @@ function sendData() {
   }
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
-  document.location.href = 'HomePage.html'
+  document.location.href = 'index.html'
 }
 
 

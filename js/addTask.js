@@ -17,7 +17,7 @@ if (!userCheck) {
   document.location.href = 'login.html'
 }
 if (!currentUser.teamLeader.admin) {
-  document.location.href = 'HomePage.html'
+  document.location.href = 'index.html'
 }
 
 document.getElementById("course").value = currentUser.course;
@@ -81,7 +81,7 @@ function addTask() {
       }
     }
     localStorage.setItem("users", JSON.stringify(users));
-    document.location.href = 'HomePage.html'
+    document.location.href = 'index.html'
   }
 
 }

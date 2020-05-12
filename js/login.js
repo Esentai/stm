@@ -37,7 +37,7 @@ function login() {
       if (email.value == users[i].email && password.value == users[i].password) {
         users[i].session = true
         localStorage.setItem("users", JSON.stringify(users));
-        document.location.href = 'HomePage.html'
+        document.location.href = 'index.html'
         auth = true;
       }
     }
