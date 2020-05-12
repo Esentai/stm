@@ -261,7 +261,8 @@ function showTable() {
       if (schedule_data[i].data[j] != null) {
         scheduleCheck = true;
         var row = table.insertRow(j);
-        row.insertCell(0).innerHTML = getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].start_time) + " - " + getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].end_time)
+        row.insertCell(0).innerHTML = getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].start_time) + " - "
+          + getSubjectTime(schedule.times[schedule_data[i].data[j][0].time_id].end_time)
         row.insertCell(1).innerHTML = schedule.subjects[schedule_data[i].data[j][0].subject_id].subject_en
         if (schedule_data[i].data[j][0].bundle_id < 459) {
           row.insertCell(2).innerHTML = schedule.bundles[schedule_data[i].data[j][0].bundle_id][0].name_en

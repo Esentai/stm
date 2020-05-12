@@ -3,7 +3,15 @@ html, body{
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(90deg, rgba(49,31,77,1) 14%, rgba(86,58,214,1) 100%);
+
+}
+body{
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ 
 }
 h1, h2, h3, h4, h5 ,h6{
   font-weight: 200;
@@ -69,11 +77,17 @@ fieldset{
 .cf {
     *zoom: 1;
 }
-
-.wrapper{
+.wrapper_2{
   width: 100%;
   margin: 30px 0;
-  /* box-shadow: 0px 0px 90px 0px rgba(0,0,0,0.75); */
+  height: 460px;
+}
+
+.wrapper_1{
+  width: 100%;
+  margin: 30px 0;
+  height: 410px;
+  box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.8);
 }
 
 /* STEPS */
@@ -96,8 +110,8 @@ fieldset{
 }
 
 .steps li.is-active{
-  border-bottom: 1px solid #1b4287;
-  color: #1b4287;
+  border-bottom: 1px solid #1e9672;
+  color: #1e9672;
 }
 
 /* FORM */
@@ -129,7 +143,7 @@ fieldset{
 }
 
 .form-wrapper .button, .form-wrapper .submit{
-  background-color: #1b4287;
+  background-color: #1e9672;
   display: inline-block;
   padding: 8px 60px;
   color: #fff;
@@ -182,7 +196,7 @@ select{
   width: 200px;
   height: 35px;
   border:none;
-  background-color: #1b4287;
+  background-color: #1e9672;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -204,10 +218,9 @@ select{
   margin: auto;
   border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 8px solid #3498db;
+  border-top: 8px solid #F3BE00;
   width: 50px;
   height: 50px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
 
@@ -220,4 +233,8 @@ select{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px){
+ 
 }

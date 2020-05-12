@@ -167,7 +167,8 @@ function selectGroup() {
 
 async function getSpecialty(courseNum) {
   var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-  var targetUrl = `http://schedule.iitu.kz/rest/user/get_specialty.php?course=${courseNum}`
+  var targetUrl = `http://schedule.iitu.kz/rest/user/
+  get_specialty.php?course=${courseNum}`
   let response = await fetch(proxyUrl + targetUrl);
   let data = await response.json()
   console.log(data.result)
@@ -176,7 +177,8 @@ async function getSpecialty(courseNum) {
 
 async function getGroup(id) {
   var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-  var targetUrl = `http://schedule.iitu.kz/rest/user/get_group.php?course=${courseNum}&specialty_id=${id}`
+  var targetUrl = `http://schedule.iitu.kz/rest/user/
+  get_group.php?course=${courseNum}&specialty_id=${id}`
   let response = await fetch(proxyUrl + targetUrl);
   let data = await response.json()
   console.log(data.result)
