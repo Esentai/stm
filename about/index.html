@@ -10,11 +10,18 @@
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="textyle.js"></script>
+
+    <script>
+        $('.s-text').textyle({
+            duration: 500
+        });
+    </script>
 </head>
 
 <body>
 
-    <div class="header">
+    <div class="header" id="#box">
         <img src="images/shape1.png" width="400" class="shape1" alt="">
         <img src="images/shape2.png" width="300" class="shape2" alt="">
         <img src="images/shape3.png" width="250" class="shape3" alt="">
@@ -22,7 +29,7 @@
         <div class="container-fluid">
 
             <div class=" clearfix">
-                <a href="" class="logotype">
+                <a href="" id="btnd" class="logotype">
                     <img src="../img/logo.png" alt="">
                 </a>
                 <div style="z-index: 1;" class="link">
@@ -34,7 +41,7 @@
                 </div>
             </div>
             <div class="main-text">
-                <h1>Smart task manager</h1>
+                <h1 class="s-text">Smart task manager</h1>
                 <p>We all sometimes do not really pay attention to deadlines, or just forget about them. And if you have encountered
                     such problems as the deadline has expired or you did not manage to fill in your task, don’t worry, we
                     created a website especially for your convenience, where you can view your deadlines and receive notifications
@@ -44,6 +51,7 @@
         </div>
 
     </div>
+
 
     <div class="content">
         <div class="container-fluid">
@@ -151,6 +159,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $("btnd").click(function () {
+                $("btnd").animate({ left: '250px' });
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function () {
             ymaps.ready(function () {

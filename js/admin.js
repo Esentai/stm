@@ -42,7 +42,7 @@ function showUsers() {
     row.insertCell(5).innerHTML = users[i].group.name_en
     row.insertCell(6).innerHTML = `<button id="${users[i].email}"  onclick="disable('${users[i].email}')" >Disable</button>`
     row.insertCell(7).innerHTML = teamLeader
-    row.insertCell(8).innerHTML = `<button class="adminBtn btnDefault">Update</button>`
+    row.insertCell(8).innerHTML = `<button class="adminBtn btnDefault"  onclick='update("${users[i]}")' >Update</button>`
     row.insertCell(9).innerHTML = `<button onclick="deleteUser('${users[i].email}')"  class="adminBtn btnDelete">Delete</button>`
   }
 }
@@ -98,4 +98,12 @@ function deleteUser(email) {
       location.reload();
     }
   }
+}
+
+function update(user) {
+  $(document).ready(function () {
+    $("#exampleModal").modal();
+  });
+  // document.getElementById("u_email").value = email;
+  // document.getElementById("u_name").value = name;
 }
